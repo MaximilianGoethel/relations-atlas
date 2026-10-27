@@ -1,0 +1,535 @@
+{
+  "country": {
+    "name": "Oman",
+    "iso3": "OMN",
+    "asOf": "2026-10-27"
+  },
+
+  "profile": {
+    "overview": "In 2026, Oman's foreign relations are dominated by the Iran war and the dispute over the Strait of Hormuz. Relations are very good with the United Kingdom, India, Qatar and South Korea, good with China and Saudi Arabia, mixed with the UAE and Iran, and tense with the United States. At home the country is stable; abroad it faces its most difficult position in decades.",
+
+    "political": {
+      "summary": "Oman is stable at home but under heavy pressure abroad. The Iran war, which began on 28 February 2026 with US-Israeli strikes, has pushed the country directly between the United States and Iran.",
+      "points": [
+        "Political system: absolute monarchy. Sultan Haitham bin Tariq has ruled since January 2020 and is also prime minister. Parliament (the elected Shura Council plus the appointed State Council) only has an advisory role.",
+        "Succession is settled: Crown Prince Theyazin, the Sultan's eldest son, has also been Deputy Prime Minister for Economic Affairs since January 2026 (Royal Decree 17/2026) and is visibly being prepared to rule.",
+        "The ruling family holds the key posts: the Sultan's uncles Shihab (defence) and Asa'ad (international cooperation) are also deputy prime ministers. Foreign Minister Badr Albusaidi is the face of Oman's mediation diplomacy.",
+        "Foreign policy doctrine 'friend to all': Oman joins no bloc, talks to every side and mediates (US–Iran, Yemen). The Sultan calls this 'constructive neutrality'; King Charles praised exactly this role during the state visit in October 2026.",
+        "In July 2026, Foreign Minister Badr wrote in Le Monde that the containment of Iran pursued since 1979 has failed. Future Gulf security must include all eight littoral states – the six GCC members plus Iran and Iraq – and the greatest dangers often come from decisions taken outside the region, especially in Tel Aviv."
+      ],
+      "timeline": [
+        {
+          "date": "20–22 Oct 2026",
+          "event": "State visit of the Sultan to the United Kingdom.",
+          "significance": "A joint statement confirms Oman's sovereignty over its waters in the Strait of Hormuz."
+        },
+        {
+          "date": "Oct 2026",
+          "event": "Iran keeps Hormuz closed until the US meets seven conditions; dozens of attacks on ships.",
+          "significance": "The war is not over; the US travel advisory for Oman stands at level 3."
+        },
+        {
+          "date": "17 Aug 2026",
+          "event": "Trump again threatens to bomb Oman if it 'stands in the way'.",
+          "significance": "An open threat against a long-standing US partner."
+        },
+        {
+          "date": "Aug 2026",
+          "event": "Iran and Oman agree on the coordinates of a shipping route; the Revolutionary Guards also claim a revenue-sharing deal.",
+          "significance": "Oman as co-administrator of Hormuz – unacceptable from the US point of view."
+        },
+        {
+          "date": "8 Jul 2026",
+          "event": "The ceasefire collapses after Iranian attacks on merchant ships.",
+          "significance": "Hormuz is blocked again."
+        },
+        {
+          "date": "23 Jun 2026",
+          "event": "Iran and Oman set up a joint committee on the future administration of Hormuz.",
+          "significance": "At the same time, Oman backs the US–Iran memorandum."
+        },
+        {
+          "date": "17 Jun 2026",
+          "event": "Islamabad memorandum between the US and Iran.",
+          "significance": "Iran is to negotiate with Oman on how Hormuz is administered."
+        },
+        {
+          "date": "27–28 May 2026",
+          "event": "Trump threatens to 'blow up' Oman; the US Treasury Secretary threatens sanctions over a Hormuz toll.",
+          "significance": "Oman gives assurances that it will not levy any toll."
+        },
+        {
+          "date": "8 Apr 2026",
+          "event": "Ceasefire mediated by Pakistan.",
+          "significance": "Oman loses its role as the sole mediator to Pakistan and Qatar."
+        },
+        {
+          "date": "1 Mar – Jun 2026",
+          "event": "Iranian drone attacks on the ports of Duqm, Salalah and Sohar and on waters off Musandam; according to one overview, 18 dead and 23 injured.",
+          "significance": "Iran denies giving any order and keeps calling Oman a 'friend and neighbour'."
+        },
+        {
+          "date": "28 Feb 2026",
+          "event": "The US and Israel attack Iran; Supreme Leader Khamenei is killed.",
+          "significance": "Nuclear talks mediated by Oman (Muscat 6 Feb, Geneva 26 Feb) collapse."
+        }
+      ],
+      "assessment": "At home there is no sign of instability: the succession is settled, the government is able to act, and the jobseeker rate fell to 3.1% in 2025. Abroad, Oman's neutrality comes at a high price in 2026: Iran hit Omani ports, the US openly threatened force and sanctions, and Pakistan and Qatar stepped in as mediators for the ceasefire. The core dilemma: Oman shares the Strait of Hormuz with Iran and has to find a solution with Tehran, while its own security depends on the US and the UK."
+    },
+
+    "economic": {
+      "summary": "Paradoxically, Oman's economy benefits from the Iran war in 2026: its main ports lie outside the Strait of Hormuz, oil keeps flowing and the high oil price fills the treasury. Structurally, however, the country remains heavily dependent on oil and gas, and non-oil growth is weak.",
+      "strengths": [
+        "Geography as a wartime advantage: Sohar, Duqm and Salalah lie outside Hormuz. S&P stresses that Oman kept exporting oil and gas without interruption. UAE trade was increasingly routed over Omani roads, and bilateral trade rose 13% to USD 3.8 bn in Q1 2026.",
+        "Repaired public finances: the debt ratio has almost halved since 2020, and since 2024 Oman has been a net creditor to the rest of the world.",
+        "Investment: according to its CEO, the Duqm special economic zone is negotiating USD 18–21 bn of projects in green steel and aluminium.",
+        "Reform course: Vision 2040 and the 11th Five-Year Plan (2026–2030) target growth of at least 3%. From 2028, Oman will be the first GCC country to levy an income tax: 5% on income above OMR 42,000, which leaves around 99% of the population exempt."
+      ],
+      "risks": [
+        "Oil dependence: oil and gas provide just over two thirds of state revenue and 65% of exports. Non-oil growth was only about 1.3% in the first half of 2026 (S&P).",
+        "War damage: drones hit Omani ports, and London insurers list Omani waters as a high-risk zone, which makes freight and charters more expensive.",
+        "Subsidies: because fuel prices are frozen, fuel support cost OMR 162 m in the first half of 2026 – 4.6 times its annual budget. Subsidies for food imports come on top.",
+        "US tariff: since 24 July 2026, a 12.5% additional tariff applies to Omani goods entering the US despite the free trade agreement.",
+        "Jobs for Omanis: Omanis make up only 21.8% of private-sector employees. At the end of 2025, 74,000 jobseekers were registered; 60,000 jobs are to be created in 2026."
+      ],
+      "assessment": "In the short term, Oman is in better financial shape than at any time in the past decade. But this 'war dividend' is borrowed: it depends on the oil price and on the Hormuz crisis continuing. In the medium term, diversification (Duqm, green hydrogen, logistics, tourism) will decide whether Oman keeps its investment-grade rating."
+    },
+
+    "keyFigures": [
+      {
+        "label": "Real GDP growth",
+        "value": "2025: 2.4% · 2026: about 3.5–3.7% · 2027: 3.0%",
+        "source": { "title": "Arab News: IMF sees Oman economy holding firm despite Middle East war", "url": "https://www.arabnews.com/node/2647415/amp", "date": "2026-06" }
+      },
+      {
+        "label": "Budget 2026 (plan)",
+        "value": "Revenue OMR 11.45 bn, spending OMR 11.98 bn, deficit OMR 530 m (1.3% of GDP); based on USD 60 per barrel",
+        "source": { "title": "Arabian Business: Oman projects higher revenues and lower deficit in 2026 state budget", "url": "https://www.arabianbusiness.com/politics-economics/oman-projects-higher-revenues-and-lower-deficit-in-2026-state-budget", "date": "2026-01" }
+      },
+      {
+        "label": "Budget H1 2026 (actual)",
+        "value": "Deficit only OMR 17 m; realised oil price USD 74 per barrel; oil and gas = 68% of revenue",
+        "source": { "title": "Oman Observer: State budget, first half of 2026", "url": "https://www.omanobserver.om/ampArticle/1196253", "date": "2026" }
+      },
+      {
+        "label": "Expected budget balance 2026",
+        "value": "Surplus of 4.5% (IMF) to 4.8% (S&P) of GDP",
+        "source": { "title": "Oman Observer: S&P affirms Oman at BBB-", "url": "https://www.omanobserver.om/ampArticle/1196771", "date": "2026-09" }
+      },
+      {
+        "label": "Public debt",
+        "value": "OMR 14.16 bn (June 2026), about 36% of GDP (2020: 68%)",
+        "source": { "title": "AGBI: Oil windfall cuts Oman budget gap but subsidy worries remain", "url": "https://www.agbi.com/economy/2026/09/oil-windfall-cuts-oman-budget-gap-but-subsidy-worries-remain/", "date": "2026-09" }
+      },
+      {
+        "label": "Credit rating",
+        "value": "Investment grade at all three agencies: S&P BBB- (since 2024, affirmed 09/2026), Moody's Baa3 (07/2025), Fitch BBB- (12/2025)",
+        "source": { "title": "MEED: Oman recovers investment grade credit rating", "url": "https://www.meed.com/oman-recovers-investment-grade-credit-rating", "date": "2024" }
+      },
+      {
+        "label": "Foreign exchange reserves",
+        "value": "About USD 19.5 bn (June 2026)",
+        "source": { "title": "Oman Observer: S&P affirms Oman at BBB-", "url": "https://www.omanobserver.om/ampArticle/1196771", "date": "2026-09" }
+      },
+      {
+        "label": "Oil production",
+        "value": "+11.9% to about 270 m barrels (Jan–Aug 2026)",
+        "source": { "title": "Oman Observer (homepage – exact article not linked in the original research)", "url": "https://www.omanobserver.om/", "date": "2026-10" }
+      },
+      {
+        "label": "LNG exports",
+        "value": "11.9 m t (2025), 8th largest exporter worldwide",
+        "source": { "title": "Oman Observer: IGU World LNG Report", "url": "https://www.omanobserver.om/ampArticle/1192704", "date": "2026" }
+      },
+      {
+        "label": "Labour market",
+        "value": "Jobseeker rate 3.1% (2025); 67% of employees are foreigners",
+        "source": { "title": "Zawya: Oman labour market expands as jobseeker rate declines", "url": "https://www.zawya.com/en/economy/gcc/oman-labour-market-expands-as-jobseeker-rate-declines-dn4jg329", "date": "2026" }
+      }
+    ],
+
+    "outlook": {
+      "summary": "Oman is a stable state in an unstable neighbourhood. Its two greatest strengths – neutrality and a location outside Hormuz – have come into conflict in the Iran war: the more important Oman's coast becomes for Gulf trade, the more every side wants a say. Politically, Oman is not switching camps but diversifying: closer ties with the UK, France, India and China, without giving up its security partnership with the US. Within the GCC it is an outsider in 2026, yet it shares the goal of a quick end to the war with Saudi Arabia, the UAE and Qatar. Its role as mediator has suffered but remains indispensable for Hormuz and Yemen. Economically, Oman profits in the short term from high oil prices, uninterrupted exports and a logistics boom: the port of Sohar handled about 52 m t of cargo in the first half of 2026, 52% more than a year earlier. Medium-term risks are its dependence on oil and on China as main customer, rising subsidy costs, the US tariff and weak non-oil growth. Opportunities include investment in Duqm, Hafeet Rail from 2027, the CEPA with India, the planned UK–GCC free trade agreement and the income tax from 2028. Observers expect a possible US escalation after the midterm elections on 3 November 2026.",
+      "scenarios": [
+        {
+          "name": "US–Iran deal with a Hormuz solution",
+          "whatHappens": "The ceasefire holds and the strait reopens with Oman involved.",
+          "consequences": "Oman's role as mediator gains weight and relations with the US ease; the oil price and the budget surplus fall."
+        },
+        {
+          "name": "Frozen conflict",
+          "whatHappens": "Hormuz stays partly blocked, with sporadic attacks.",
+          "consequences": "Oman remains the 'back door' of the Gulf with high revenues, but under constant pressure from Washington and Tehran."
+        },
+        {
+          "name": "Escalation after the US midterms (3 November)",
+          "whatHappens": "New US air strikes and Iranian retaliation.",
+          "consequences": "Risk of new attacks on Omani ports and stronger pressure on Oman to take sides."
+        }
+      ],
+      "conclusion": "Oman remains the 'friend to all', but 2026 shows the limits of this model. The key question for the coming years is whether Oman can be a partner of the US and the West, a reliable neighbour to Iran and the logistics hub of the Gulf – all at the same time."
+    },
+
+    "sources": [
+      { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+      { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" },
+      { "title": "Al-Monitor: As US ties fray, top Oman official visits China", "url": "https://www.al-monitor.com/originals/2026/07/us-ties-fray-top-oman-official-visits-china-what-know", "date": "2026-07" },
+      { "title": "Wikipedia: 2026 Iranian strikes on Oman", "url": "https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_Oman", "date": "2026-10" },
+      { "title": "Wikipedia: 2026 Strait of Hormuz crisis", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis", "date": "2026-10" },
+      { "title": "Wikipedia: Oman–United States relations", "url": "https://en.wikipedia.org/wiki/Oman%E2%80%93United_States_relations", "date": "2026-10" },
+      { "title": "Chatham House: Oman, eastern Yemen, and the fragile geometry of neutrality", "url": "https://www.chathamhouse.org/2026/01/oman-eastern-yemen-and-fragile-geometry-neutrality", "date": "2026-01" },
+      { "title": "Times of Oman: His Majesty reconstitutes Council of Ministers", "url": "https://timesofoman.com/article/167117-his-majesty-reconstitutes-council-of-ministers", "date": "2026-01" },
+      { "title": "Kuwait Times: King Charles lauds Omani peace efforts on Sultan's state visit", "url": "https://kuwaittimes.com/article/52093/world/king-charles-lauds-omani-peace-efforts-on-sultans-state-visit/", "date": "2026-10" },
+      { "title": "Oman Ministry of Foreign Affairs: Badr Albusaidi on Gulf security", "url": "https://www.fm.gov.om/en/50917/", "date": "2026-07" },
+      { "title": "Oman Ministry of Foreign Affairs: Joint statement Oman–United Kingdom", "url": "https://www.fm.gov.om/en/61943/", "date": "2026-10-23" },
+      { "title": "US Embassy Muscat: Travel advisory Oman, October 2026", "url": "https://om.usembassy.gov/travel-advisory-oman-october-2026/", "date": "2026-10" },
+      { "title": "CNBC: Trump threatens Oman over Hormuz", "url": "https://www.cnbc.com/2026/08/17/us-iran-war-trump-hormuz.html", "date": "2026-08-17" },
+      { "title": "Euronews: Iran and Oman agree route for ships in Strait of Hormuz, Tehran says", "url": "https://www.euronews.com/2026/08/05/iran-and-oman-agree-route-for-ships-in-strait-of-hormuz-tehran-says", "date": "2026-08-05" },
+      { "title": "GlobalSecurity (PressTV): Iran–Oman Hormuz committee", "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/06/iran-260623-presstv09.htm", "date": "2026-06-23" },
+      { "title": "Al Jazeera: US and Iran both claim control of Strait of Hormuz", "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels", "date": "2026-10-17" },
+      { "title": "Al Jazeera: Iran says Hormuz to remain closed until US meets conditions", "url": "https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions", "date": "2026-10-04" },
+      { "title": "AGBI: UAE strengthens position as Oman's top trading partner", "url": "https://www.agbi.com/trade/2026/06/uae-strengthens-position-as-omans-top-trading-partner/", "date": "2026-06" },
+      { "title": "Arab News: Oman's Duqm negotiating up to $21bn in new investments, says CEO", "url": "https://www.arabnews.com/business/omans-duqm-negotiating-up-to-21bn-in-new-investments-says-ceo-3007681", "date": "2026" },
+      { "title": "WTW: Oman Personal Income Tax Law", "url": "https://www.wtwco.com/en-cm/insights/2025/08/oman-personal-income-tax-law", "date": "2025-08" },
+      { "title": "Thompson Coburn: Administration implements Section 301 tariffs on 60 economies", "url": "https://www.thompsoncoburn.com/insights/83-july-27-2026-administration-implements-section-301-tariffs-on-60-economies/", "date": "2026-07-27" },
+      { "title": "Gulf Business: Oman plan for 60,000 jobs in 2026", "url": "https://gulfbusiness.com/en/2026/jobs/oman-plan-for-60000-jobs-in-2026-means-workforce/", "date": "2026" }
+    ]
+  },
+
+  "selection": {
+    "criteria": "Partners were chosen by economic weight (trade, oil and gas customers, investment) and by political and security weight (neighbourhood, protecting powers, the Strait of Hormuz). The influence rating is our own assessment based on the research. Trade figures come from different years and sources and are only roughly comparable.",
+    "nearMisses": [
+      "France – a partner of growing importance for Oman in 2026.",
+      "Pakistan – the main mediator in the Iran war.",
+      "Kuwait – an important supplier.",
+      "Japan – a major LNG customer and co-owner of Oman LNG; South Korea was chosen as the larger single buyer."
+    ]
+  },
+
+  "relations": [
+    {
+      "partner": "CHN",
+      "rank": 1,
+      "influence": "very high",
+      "status": "good",
+      "trend": "rising",
+      "headline": "Good and growing – economically central, limited on security",
+      "economic": [
+        "Trade 2024: USD 36.7 bn according to China's foreign ministry, which makes China Oman's largest trading partner.",
+        "Oil: China bought over 40.7 m t of Omani crude in 2024, and Oman is China's fifth-largest supplier. From January to September 2024, 219.6 of 230.6 m exported barrels went to China – about 95%.",
+        "Investment: since 2016 there has been a 50-year lease for a Chinese industrial park in Duqm with over USD 10 bn of planned investment. Progress is slow; in actual direct investment China lags far behind the UK and the US.",
+        "Risk: Oman's budget depends heavily on Chinese oil demand – a dependence on a single customer."
+      ],
+      "politicalSecurity": [
+        "China is the largest buyer of Omani oil and therefore the most important source of money for Oman's state budget.",
+        "So far there have been no state visits at head-of-state level and hardly any military cooperation. Since 2009, Salalah has served Chinese navy ships only as a supply port."
+      ],
+      "current": [
+        "Since the rift with Washington during the Iran war, Muscat has been deepening its political contacts with Beijing.",
+        "July 2026: the Secretary-General of Oman's National Security Council travelled to Beijing. Both sides pledged support for each other's 'core interests' and want to link the Belt and Road Initiative with Oman's Vision 2040. Before that, Foreign Minister Badr had met China's Middle East envoy.",
+        "Analysts read this as a signal to Washington that Oman guards its independence, not as a radical realignment.",
+        "During the war, Iran let Chinese ships through Hormuz with priority. At the same time, Beijing demanded that the strait stay open and criticised Iran's attacks on its neighbours."
+      ],
+      "assessment": "Good. China is economically vital for Oman and a growing political hedge against the US – but as a protecting power it does not replace Washington and London.",
+      "sources": [
+        { "title": "Al-Monitor: As US ties fray, top Oman official visits China", "url": "https://www.al-monitor.com/originals/2026/07/us-ties-fray-top-oman-official-visits-china-what-know", "date": "2026-07" },
+        { "title": "Arab News: Oman's crude oil exports to China", "url": "https://www.arabnews.com/node/2577891/", "date": "2024" },
+        { "title": "AGSI: Oman's bittersweet economic relations with China", "url": "https://agsi.org/analysis/omans-bittersweet-economic-relations-with-china/", "date": "2026-10" },
+        { "title": "Responsible Statecraft: China and Oman", "url": "https://responsiblestatecraft.org/china-oman/", "date": "2026" },
+        { "title": "Wikipedia: 2026 Strait of Hormuz crisis", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "USA",
+      "rank": 2,
+      "influence": "very high",
+      "status": "tense",
+      "trend": "rising",
+      "headline": "Strategically indispensable, politically at a low point",
+      "economic": [
+        "Free trade agreement since 2009. Goods trade 2025: USD 3.3 bn (US exports USD 2.2 bn, imports from Oman USD 1.1 bn).",
+        "Small by comparison: trade with China was USD 36.7 bn in 2024.",
+        "Since 24 July 2026, the US has levied a 12.5% additional tariff on Omani goods despite the free trade agreement (Section 301, citing insufficient action against forced labour)."
+      ],
+      "politicalSecurity": [
+        "The US has been Oman's main protecting power for decades; in 1833 Oman became the first Arab state to sign a treaty with Washington.",
+        "US forces have had access to Omani bases since 1980. In 2019 this was extended to the ports of Duqm and Salalah, including for aircraft carriers.",
+        "In January 2025, 63 arms deals (Foreign Military Sales) worth over USD 2.7 bn were active."
+      ],
+      "current": [
+        "March 2026: Foreign Minister Badr accused Washington in The Economist of following Israel and losing control of its own foreign policy. The US withdrew non-essential embassy staff.",
+        "May and August 2026: Trump threatened to bomb Oman over its talks with Iran on Hormuz; Treasury Secretary Bessent threatened sanctions if a toll system were introduced. According to the Wall Street Journal, Washington pressed Muscat to cut its ties with Iran.",
+        "A former US ambassador to Oman said Muscat had partly moved closer to Iranian positions.",
+        "Signs of easing: on 21 August, Secretary of State Rubio met Oman's ambassador. On 15 September he called Foreign Minister Badr, praised Oman's role in de-escalation and spoke in favour of closer ties."
+      ],
+      "assessment": "Tense, but slowly recovering since September. The military partnership continues, and Washington needs Oman for Hormuz and for contacts with Iran. But threats, the tariff and mistrust have done political damage; Oman is responding by diversifying towards the UK, France and China.",
+      "sources": [
+        { "title": "USTR: Oman trade summary", "url": "https://www.ustr.gov/countries-regions/europe-middle-east/middle-eastnorth-africa/oman", "date": "2026-10" },
+        { "title": "Al-Monitor: As US ties fray, top Oman official visits China", "url": "https://www.al-monitor.com/originals/2026/07/us-ties-fray-top-oman-official-visits-china-what-know", "date": "2026-07" },
+        { "title": "Thompson Coburn: Administration implements Section 301 tariffs on 60 economies", "url": "https://www.thompsoncoburn.com/insights/83-july-27-2026-administration-implements-section-301-tariffs-on-60-economies/", "date": "2026-07-27" },
+        { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+        { "title": "The National: US-Oman ties face strain as Muscat walks tightrope between Washington and Tehran", "url": "https://www.thenationalnews.com/news/gulf/2026/08/21/us-oman-ties-face-strain-as-muscat-walks-tightrope-between-washington-and-tehran/", "date": "2026-08-21" },
+        { "title": "The National: Rubio and Al Busaidi call", "url": "https://www.thenationalnews.com/news/us/2026/09/15/oman-us-rubio-trump-al-busaidi/", "date": "2026-09-15" },
+        { "title": "Oman Observer: Oman's ambassador to US meets Marco Rubio", "url": "https://www.omanobserver.om/article/1194859/oman/community/omans-ambassador-to-us-meets-marco-rubio", "date": "2026-08" },
+        { "title": "CNBC: Trump threatens Oman over Hormuz", "url": "https://www.cnbc.com/2026/08/17/us-iran-war-trump-hormuz.html", "date": "2026-08-17" },
+        { "title": "Wikipedia: Oman–United States relations", "url": "https://en.wikipedia.org/wiki/Oman%E2%80%93United_States_relations", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "IRN",
+      "rank": 3,
+      "influence": "very high",
+      "status": "mixed",
+      "trend": "falling",
+      "headline": "Close and friendly, but unequal – and under heavy strain in 2026",
+      "economic": [
+        "Trade January–October 2025: USD 1.35 bn (+24%). Iran was the second-largest buyer of Omani re-exports (USD 843 m, 21% of all re-exports).",
+        "The two countries have a preferential trade agreement and aim for trade of USD 20–30 bn – many times today's level.",
+        "Economically Iran is fairly small for Oman; its importance is mainly geopolitical."
+      ],
+      "politicalSecurity": [
+        "Iran is Oman's most important and most difficult neighbour: the two share the Strait of Hormuz.",
+        "Unlike the other Gulf states, Oman does not see Iran as a threat – partly because the Shah helped put down the Dhofar rebellion in the 1970s, and because Oman's Ibadi majority is hardly drawn into sectarian conflict.",
+        "Oman mediated the US–Iran nuclear talks in 2025/26 (Muscat, Rome, Geneva) until the war ended them."
+      ],
+      "current": [
+        "Oman called the US-Israeli strikes 'immoral and illegal'. In March, Foreign Minister Badr wrote in The Economist that Iran's retaliation against the Gulf states was unacceptable but probably its only rational option – which irritated Oman's GCC partners.",
+        "Iranian drones hit Omani ports. Tehran denied responsibility and Oman never named Iran as the attacker; both sides deliberately played the attacks down to protect the relationship.",
+        "June 2026: joint committee on the future administration of the strait.",
+        "July 2026: Iran rejected Oman's plan modelled on the Strait of Malacca (joint administration, voluntary fees, support from the GCC states). A 50:50 model did not serve Iran's interests, and Iran no longer recognises the existing shipping lane in Omani waters.",
+        "August–October 2026: agreement on the coordinates of transit routes controlled by Iran. At the same time, an adviser to the Revolutionary Guards called the southern route along Oman's coast 'illegal', and on 11 October a drone hit a tanker off Sohar."
+      ],
+      "assessment": "Friendly in tone, but not a partnership of equals. Iran uses Oman as a channel and a source of legitimacy, yet rejects an equal Hormuz arrangement and endangers ships in Omani waters. For Oman the relationship is indispensable – and in 2026 its biggest foreign-policy risk.",
+      "sources": [
+        { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+        { "title": "Tehran Times: Iranian exports to Oman hit $500m over 10 months", "url": "https://www.tehrantimes.com/news/522278/Iranian-exports-to-Oman-hit-500m-over-10-months", "date": "2025" },
+        { "title": "Muscat Daily: $30bn trade target as Oman-Iran bilateral ties deepen", "url": "https://www.muscatdaily.com/2025/05/28/30bn-trade-target-as-oman-iran-bilateral-ties-deepen/", "date": "2025-05-28" },
+        { "title": "Wikipedia: Iran–Oman relations", "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Oman_relations", "date": "2026-10" },
+        { "title": "Wikipedia: 2026 Iranian strikes on Oman", "url": "https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_Oman", "date": "2026-10" },
+        { "title": "Oman Observer: Oman's proposal for the Strait of Hormuz", "url": "https://www.omanobserver.om/ampArticle/1193652", "date": "2026-07" },
+        { "title": "Maritime Executive: Iran rejects proposal for joint governance of Hormuz", "url": "https://maritime-executive.com/index.php/article/iran-rejects-proposal-for-joint-governance-of-hormuz", "date": "2026-07" },
+        { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "SAU",
+      "rank": 4,
+      "influence": "high",
+      "status": "good",
+      "trend": "stable",
+      "headline": "Good and institutionalised, with friction in 2026",
+      "economic": [
+        "Trade 2025: about OMR 2.48 bn (≈ USD 6.4 bn); first half of 2026: about OMR 1.09 bn.",
+        "Direct investment 2025: Saudi Arabia in Oman about OMR 72.8 m, Oman in Saudi Arabia about OMR 115.9 m. Saudi Arabia's sovereign wealth fund PIF has opened an office in Oman.",
+        "During the war, Saudi Aramco offered crude for transshipment off Sohar, according to Bloomberg – Omani waters are becoming an export outlet for Saudi oil as well."
+      ],
+      "politicalSecurity": [
+        "Saudi Arabia is Oman's largest neighbour and the political heavyweight of the Gulf Cooperation Council (GCC). Since 2021 the once rather cool relationship has improved markedly.",
+        "A Saudi-Omani Coordination Council has existed since July 2021, founded during Sultan Haitham's first trip abroad. In September 2026, an economic work programme for 2026–2028 was signed in Salalah.",
+        "Oman mediated between Riyadh and the Houthis in Yemen and helped bring about the Saudi-Iranian rapprochement in 2023."
+      ],
+      "current": [
+        "Oman sent no one to the GCC summit on the Iran war in Jeddah on 28 April 2026 – a clear signal of distance.",
+        "September 2026: a regional meeting on the Iran-Oman Hormuz arrangement was postponed. According to Axios and CNN, Riyadh wanted changes because it feared a new status quo in the strait.",
+        "October 2026: the Houthis attacked Saudi airports and Riyadh struck back in Yemen. Oman clearly condemned the attacks and stood with Saudi Arabia."
+      ],
+      "assessment": "Good. The partnership has grown economically and is firmly anchored. On Iran and Hormuz, however, their interests diverge: Riyadh does not want a special Iranian-Omani regime in the strait.",
+      "sources": [
+        { "title": "Oman Observer: Oman, Saudi Arabia founded upon wise vision", "url": "https://www.omanobserver.om/article/1196601/oman/oman-saudi-arabia-founded-upon-wise-vision", "date": "2026" },
+        { "title": "Oman Observer: Oman and Saudi Arabia – deep-rooted partnership, promising future", "url": "https://www.omanobserver.om/article/1195474/oman/oman-and-saudi-arabia-deep-rooted-partnership-promising-future", "date": "2026" },
+        { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" },
+        { "title": "New Lines Institute: The limits of a Saudi-Omani rapprochement", "url": "https://newlinesinstitute.org/middle-east-center/hed-the-limits-of-a-saudi-omani-rapprochement/", "date": "2026-10" },
+        { "title": "Oman Ministry of Foreign Affairs: Saudi-Omani Coordination Council", "url": "https://www.fm.gov.om/en/54220/", "date": "2026-09" },
+        { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+        { "title": "Arab News: Omani FM condemns attacks on Saudi airports in phone call with Prince Faisal", "url": "https://www.arabnews.pk/saudi-arabia/omani-fm-condemns-attacks-on-saudi-airports-in-phone-call-with-prince-faisal-3003774", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "ARE",
+      "rank": 5,
+      "influence": "high",
+      "status": "mixed",
+      "trend": "stable",
+      "headline": "Economically very close, strategically at odds",
+      "economic": [
+        "No. 1 in total trade: from January to September 2025, bilateral trade rose 9% to USD 10.4 bn.",
+        "In 2025, non-oil exports worth OMR 1.31 bn went to the UAE (+25%); imports from the UAE exceeded OMR 4.1 bn.",
+        "War effect: in Q1 2026, trade grew 13% to USD 3.8 bn because the UAE routed more goods by truck through Oman.",
+        "Hafeet Rail: a 238 km railway from Sohar to Al Ain, a joint venture of Etihad Rail, Oman Rail and Mubadala; trial operation from Q4 2027."
+      ],
+      "politicalSecurity": [
+        "The UAE is Oman's direct neighbour, including around the Musandam exclave on the Strait of Hormuz. On Iran, however, the two countries follow almost opposite lines.",
+        "There is historical mistrust: in 2011 Oman said it had broken up an alleged UAE spy ring, which Abu Dhabi denied."
+      ],
+      "current": [
+        "The UAE is the most heavily attacked country in the Iran war: by May 2026 it had intercepted 551 ballistic missiles and over 2,200 drones.",
+        "In April 2026 the UAE supported a US operation to control the strait, and in August it halted all trade with Iran. Oman, by contrast, is negotiating with Tehran over Hormuz.",
+        "In October 2026, Iran's security chief declared the US-backed UAE oil shuttle off Oman's coast a target."
+      ],
+      "assessment": "Economically good and mutually dependent, politically cool. Oman profits from the UAE's need for a transit country, but Abu Dhabi sees Iran as an enemy while Muscat sees it as a neighbour – and this contrast sharpened in 2026.",
+      "sources": [
+        { "title": "AGBI: UAE is Oman's largest trading partner", "url": "https://www.agbi.com/trade/2025/12/uae-omans-largest-trading-partner/", "date": "2025-12" },
+        { "title": "Gulf News: UAE tops Oman's non-oil exports and re-exports in 2025", "url": "https://gulfnews.com/business/uae-tops-omans-non-oil-exports-and-re-exports-in-2025-1.500451085", "date": "2026" },
+        { "title": "AGBI: UAE strengthens position as Oman's top trading partner", "url": "https://www.agbi.com/trade/2026/06/uae-strengthens-position-as-omans-top-trading-partner/", "date": "2026-06" },
+        { "title": "AGBI: UAE-Oman rail service to hold trial run next year", "url": "https://www.agbi.com/transport/2026/09/uae-oman-rail-service-to-hold-trial-run-next-year/", "date": "2026-09" },
+        { "title": "Wikipedia: Oman–United Arab Emirates relations", "url": "https://en.wikipedia.org/wiki/Oman%E2%80%93United_Arab_Emirates_relations", "date": "2026-10" },
+        { "title": "Wikipedia: United Arab Emirates in the 2026 Iran war", "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates_in_the_2026_Iran_war", "date": "2026-10" },
+        { "title": "Wikipedia: Iran–United Arab Emirates relations", "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93United_Arab_Emirates_relations", "date": "2026-10" },
+        { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "GBR",
+      "rank": 6,
+      "influence": "high",
+      "status": "very good",
+      "trend": "rising",
+      "headline": "Very good – currently Oman's most reliable Western partner",
+      "economic": [
+        "Largest investor: the UK's stock of direct investment stood at OMR 13.7 bn (≈ USD 35.6 bn) at the end of Q3 2024 – just over half of all foreign direct investment in Oman.",
+        "Trade: GBP 1.8 bn in the four quarters to Q2 2025 (+14.7%), of which UK exports were GBP 1.3 bn.",
+        "Results of the state visit: UK export credit for Oman raised by GBP 1.6 bn to up to GBP 7 bn, a new investment partnership with Oman's sovereign wealth fund (OIA), a space agreement and cooperation on green industries. Both sides aim to sign the UK–GCC free trade agreement soon."
+      ],
+      "politicalSecurity": [
+        "The UK is Oman's oldest Western ally. British special forces helped end the Dhofar rebellion in the 1970s, and British officers served in Oman's army into the 1980s.",
+        "2016 agreement on a naval base at Duqm; 2018 a 37-year lease for a joint logistics base. The legal basis is the 2019 defence agreement, and the large exercise Saif Sareea IV is being prepared."
+      ],
+      "current": [
+        "October 2026: the first state visit by an Omani sultan in 44 years. King Charles explicitly praised Oman's mediation.",
+        "The joint statement confirms Oman's sovereignty over its waters in the Strait of Hormuz under the UN Convention on the Law of the Sea – backing against Iranian claims and American pressure at the same time.",
+        "London rejects Iranian transit fees and in April 2026 organised a conference of around 50 states on reopening the strait."
+      ],
+      "assessment": "Very good. In 2026 the UK is the partner that combines security, investment and political backing for Oman without questioning Muscat's neutrality.",
+      "sources": [
+        { "title": "Kuwait Times: King Charles lauds Omani peace efforts on Sultan's state visit", "url": "https://kuwaittimes.com/article/52093/world/king-charles-lauds-omani-peace-efforts-on-sultans-state-visit/", "date": "2026-10" },
+        { "title": "AGBI: UK invests more than $5bn FDI in Oman in 12 months", "url": "https://www.agbi.com/trade/2025/01/uk-invests-more-than-5bn-dollar-fdi-in-oman-in-12-months/", "date": "2025-01" },
+        { "title": "Zawya: Trade between Oman and UK", "url": "https://www.zawya.com/en/economy/gcc/trade-between-oman-and-uk-hits-219bln-s5t1p55v", "date": "2025" },
+        { "title": "Oman Ministry of Foreign Affairs: Joint statement Oman–United Kingdom", "url": "https://www.fm.gov.om/en/61943/", "date": "2026-10-23" },
+        { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+        { "title": "Wikipedia: 2026 Strait of Hormuz crisis", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "IND",
+      "rank": 7,
+      "influence": "high",
+      "status": "very good",
+      "trend": "rising",
+      "headline": "Very good, broad-based and free of conflict",
+      "economic": [
+        "Bilateral trade in India's fiscal year 2025/26: USD 11.19 bn. India is the third-largest source of Oman's non-oil imports and the third-largest buyer of its non-oil exports; Oman runs a surplus of just over USD 3 bn.",
+        "CEPA free trade agreement: signed on 18 December 2025 during Prime Minister Modi's visit and in force since 1 June 2026. 99.38% of India's exports to Oman (by value) are duty-free. It is Oman's first bilateral trade agreement since the one with the US in 2006."
+      ],
+      "politicalSecurity": [
+        "India is Oman's closest partner in Asia – through trade, labour migration and the military.",
+        "Oman is the only Gulf country with which all three Indian armed services exercise regularly. Since 2018 the Indian Navy has been allowed to use the port of Duqm for logistics and maintenance."
+      ],
+      "current": [
+        "During the Iran war, several Indians died in attacks off Oman's coast and in Sohar. The Indian Navy escorted ships in the Gulf of Oman from March.",
+        "Foreign Minister Jaishankar visited Muscat in July 2026; topics were trade, energy and maritime security.",
+        "On 7 October 2026 the two countries held strategic talks in New Delhi, including on the situation in the Strait of Hormuz."
+      ],
+      "assessment": "Very good. There are no open conflicts and a shared interest in free navigation, and as a rising power India is an ideal partner for Oman's diversification strategy.",
+      "sources": [
+        { "title": "Embassy of India, Muscat: Trade and commerce brief", "url": "https://www.indemb-oman.gov.in/page/trade-and-commerce-brief/", "date": "2026-10" },
+        { "title": "Onmanorama: India–Oman CEPA comes into force", "url": "https://www.onmanorama.com/upsc/current-affairs/2026/06/02/india-oman-cepa-comes-into-force.html", "date": "2026-06-02" },
+        { "title": "PIB (Government of India): Press release on the India–Oman CEPA", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2267513&reg=48&lang=2", "date": "2026" },
+        { "title": "Drishti IAS: India and Oman", "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/india-and-oman", "date": "2026-10" },
+        { "title": "Wikipedia: 2026 Strait of Hormuz crisis", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis", "date": "2026-10" },
+        { "title": "Times of Oman: Oman, India discuss strategic partnership and regional maritime security", "url": "https://timesofoman.com//article/174204-oman-india-discuss-strategic-partnership-regional-maritime-security", "date": "2026-07" },
+        { "title": "NewKerala (ANI): India, Oman discuss Strait of Hormuz and regional security", "url": "https://www.newkerala.com/news/a/india-oman-discuss-strait-hormuz-regional-security-15th-208.htm", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "QAT",
+      "rank": 8,
+      "influence": "medium",
+      "status": "very good",
+      "trend": "stable",
+      "headline": "Very good – like-minded partners in the GCC",
+      "economic": [
+        "Trade 2025: over USD 1.1 bn – fairly small, but growing.",
+        "During the war, Qatar designated the ports of Sohar, Salalah and Duqm as alternative routes for its blocked Hamad port."
+      ],
+      "politicalSecurity": [
+        "Qatar is Oman's closest ally within the Gulf Cooperation Council. Both are small states with independent foreign policies, both mediate between the US and Iran, and both distrust Saudi-Emirati dominance in the Gulf.",
+        "In 2017–2021, Oman refused to join the blockade of Qatar by Saudi Arabia, the UAE and Bahrain, which built lasting trust in Doha.",
+        "During Sultan Haitham's state visit to Doha in November 2021, six agreements were signed, including on military cooperation and an investment partnership between the sovereign wealth funds QIA and OIA."
+      ],
+      "current": [
+        "Close exchange in 2026: the Emir visited Oman in April and the Sultan travelled to Doha in August.",
+        "Qatar was itself hit by Iranian attacks, and QatarEnergy had to halt gas production. Oman condemned attacks on energy facilities in Qatar and the UAE.",
+        "In May 2026, Qatar and Pakistan took on the leading mediating role between the US and Iran – partly at Washington's request, while Oman's channel was politically strained."
+      ],
+      "assessment": "Very good. Qatar and Oman are natural partners with similar foreign policies. The only quiet rivalry is over who is the preferred mediator.",
+      "sources": [
+        { "title": "Arab Center Washington DC: Oman and the Iran War – Neutrality Under Strain", "url": "https://arabcenterdc.org/resource/oman-and-the-iran-war-neutrality-under-strain/", "date": "2026-05" },
+        { "title": "Gulf News: Oman, Qatar sign six agreements during Sultan Haitham's visit to Doha", "url": "https://gulfnews.com/amp/world/gulf/qatar/oman-qatar-sign-six-agreements-during-sultan-haithams-visit-to-doha-1.83882196", "date": "2021-11" },
+        { "title": "QNA: The Emir receives the Sultan of Oman", "url": "https://qna.org.qa/fr-FR/News-Area/News/2026-8/9/son-altesse-lemir-accueille-le-sultan-doman-a-la-tete-dune-delegation-officielle", "date": "2026-08-09" },
+        { "title": "Oman Ministry of Foreign Affairs: News on Qatar", "url": "https://www.fm.gov.om/en/tag/qatar-en/", "date": "2026-10" },
+        { "title": "Qatar Tribune: Qatar, Oman seek to boost trade and investment cooperation", "url": "https://www.qatar-tribune.com/article/252067/business/qatar-oman-seek-to-boost-trade-and-investment-cooperation", "date": "2026" },
+        { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "YEM",
+      "rank": 9,
+      "influence": "medium",
+      "status": "mixed",
+      "trend": "falling",
+      "headline": "A security risk on the border – with Oman as mediator",
+      "economic": [
+        "Economically, Yemen plays almost no role for Oman."
+      ],
+      "politicalSecurity": [
+        "The two countries share a border of around 300 km with the province of al-Mahra. Oman is the main channel of communication with the Houthis and Saudi Arabia's partner in securing eastern Yemen.",
+        "Late 2025: the UAE-backed Southern Transitional Council (STC) took over al-Mahra. Chatham House called this Oman's most acute security threat in decades; Muscat felt encircled by the UAE and its allies.",
+        "Oman reinforced the border and, according to diplomats, shared intelligence with Saudi Arabia against the STC. Muscat's red lines: no UAE influence, no separatists and no Salafists on its border.",
+        "The STC collapsed in 2026. Saudi-backed forces now stand in al-Mahra – from Oman's point of view also a source of uncertainty.",
+        "Oman hosts the Houthi negotiators. In 2025 it mediated a ceasefire between the US and the Houthis in the Red Sea and, at the end of 2025, a Saudi-Houthi prisoner exchange."
+      ],
+      "current": [
+        "In 2026 the Houthis joined the Iran war, launched an offensive against the government in September and attacked Saudi airports in October.",
+        "Riyadh proposed a two-week ceasefire mediated via Oman; US officials met Houthis in Oman to secure passage through the Bab al-Mandab.",
+        "The US government bars its staff from travelling within 20 miles of the Yemeni border."
+      ],
+      "assessment": "No conflict between the two states, but a permanent trouble spot. Yemen is Oman's most dangerous land border and at the same time a source of its diplomatic weight: anyone who wants to talk to the Houthis needs Muscat.",
+      "sources": [
+        { "title": "Chatham House: Oman, eastern Yemen, and the fragile geometry of neutrality", "url": "https://www.chathamhouse.org/2026/01/oman-eastern-yemen-and-fragile-geometry-neutrality", "date": "2026-01" },
+        { "title": "Middle East Eye: How Oman went from mediator to silent Saudi partner in Yemen fight", "url": "https://www.middleeasteye.net/news/how-oman-went-mediator-silent-saudi-partner-yemen-fight", "date": "2026" },
+        { "title": "House of Commons Library: Yemen research briefing", "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10427/", "date": "2026" },
+        { "title": "Wikipedia: 2026 Yemen offensives", "url": "https://en.wikipedia.org/wiki/2026_Yemen_offensives", "date": "2026-10" },
+        { "title": "Arab Center Washington DC: Saudi Arabia's search for allies in Yemen", "url": "https://arabcenterdc.org/resource/saudi-arabias-search-for-allies-in-yemen/", "date": "2026-10" },
+        { "title": "US Embassy Muscat: Travel advisory Oman, October 2026", "url": "https://om.usembassy.gov/travel-advisory-oman-october-2026/", "date": "2026-10" }
+      ]
+    },
+    {
+      "partner": "KOR",
+      "rank": 10,
+      "influence": "medium",
+      "status": "very good",
+      "trend": "stable",
+      "headline": "Very good – driven by energy and investment",
+      "economic": [
+        "Largest single buyer of Omani LNG: in 2023, 5.08 m t of Oman's 11.43 m t of LNG exports went to South Korea, ahead of Japan (2.19 m t).",
+        "Korea LNG holds a 5% stake in Oman LNG.",
+        "Korean companies build infrastructure in Oman: in August 2026, Doosan Enerbility won the construction contract for the 1,700 MW Misfah gas power plant near Muscat (about USD 680 m), its second Omani award within about two months after the Duqm power plant."
+      ],
+      "politicalSecurity": [
+        "There are no political conflicts; the relationship is unpolitical and focused on energy and investment.",
+        "Since the Iran war began, Oman has become even more valuable to South Korea as an LNG supplier located outside the Strait of Hormuz."
+      ],
+      "current": [
+        "August 2026: Doosan's Misfah contract (see above) – commercial operation is planned for April 2029."
+      ],
+      "assessment": "Very good and stable. The relationship is unpolitical and centred on energy and investment. Its risk lies not in politics but in the security of the sea lanes off Oman's coast.",
+      "sources": [
+        { "title": "Zawya: Oman remains a significant player in the global LNG market", "url": "https://www.zawya.com/en/business/energy/oman-remains-a-significant-player-in-the-global-lng-market-hexmnpfv", "date": "2024" },
+        { "title": "Business Wire: TotalEnergies extends partnership with Oman LNG (shareholder structure)", "url": "https://www.businesswire.com/news/home/20231102100097/en/TotalEnergies-Extends-Partnership-with-Oman-LNG", "date": "2023-11-02" },
+        { "title": "Oman Observer: South Korea's Doosan wins major EPC contract for Misfah power project", "url": "https://www.omanobserver.om/article/1194837/business/energy/south-koreas-doosan-wins-major-epc-contract-for-misfah-power-project", "date": "2026-08-21" },
+        { "title": "MEED: Contractors confirm $683m Oman power plant contract", "url": "https://www.meed.com/contractors-confirm-683m-oman-power-plant-contract", "date": "2026-08" },
+        { "title": "Morocco World News: Oman Stayed Neutral. Its Ports Couldn't.", "url": "https://www.moroccoworldnews.com/2026/10/342759/oman-stayed-neutral-its-ports-couldnt/", "date": "2026-10" }
+      ]
+    }
+  ]
+}
