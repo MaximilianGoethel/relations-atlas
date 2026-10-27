@@ -4,10 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relations Atlas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: system-ui, sans-serif; text-align: center; padding: 3rem 1rem;">
-  <!-- Temporary test page (roadmap step 1). Will be replaced by the world map. -->
-  <h1>Relations Atlas</h1>
-  <p>An interactive map of international relations. Coming soon.</p>
+<body>
+  <header class="site-header">
+    <h1>Relations Atlas</h1>
+    <p class="hint">Hover over a country to see its name. Scroll or pinch to zoom, drag to move.</p>
+  </header>
+
+  <main id="map-container">
+    <svg id="map" role="img" aria-label="World map"></svg>
+    <div id="tooltip" class="tooltip" hidden></div>
+    <p id="map-status" class="map-status">Loading map…</p>
+  </main>
+
+  <!-- Libraries from a CDN (no install needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

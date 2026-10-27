@@ -3,3 +3,6 @@
 
 # Source document, kept local only (the GitHub repository is public)
 *.pdf
+
+# Local preview settings for Claude
+.claude/launch.json
