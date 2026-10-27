@@ -26,6 +26,8 @@ const path = d3.geoPath(projection);
 // Zoom with mouse wheel / pinch, move by dragging
 const zoom = d3.zoom()
   .scaleExtent([1, 12])
+  // Small mouse movements during a click still count as a click, not a drag
+  .clickDistance(6)
   .on("zoom", (event) => {
     mapLayer.attr("transform", event.transform);
   });
