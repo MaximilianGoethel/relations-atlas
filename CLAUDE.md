@@ -26,17 +26,35 @@ Eine interaktive Weltkarte als Website. Klick auf ein Land zeigt Pfeile zu seine
 - Dateistruktur:
   - index.html, style.css, app.js
   - data/countries/<ISO3>.json (eine Datei pro Land)
+  - data/country-codes.json (Ländercodes, siehe unten)
 - Länder ohne Daten bleiben anklickbar und zeigen "No data yet".
 
 ## Datenformat pro Land (data/countries/<ISO3>.json)
-- country: Name, ISO3-Code, asOf (Stand-Datum)
-- profile: politische Lage, wirtschaftliche Lage, Kennzahlen, Ausblick
-- relations: genau 10 Einträge, jeweils mit
-  - partner (ISO3), rank, influence (very high / high / medium)
-  - status (very good / good / mixed / tense / hostile / war), trend (rising / stable / falling)
-  - economic, politicalSecurity, current (aktuelle Entwicklungen), assessment
+Festgelegt am 27.10.2026. Vorlage ist data/countries/OMN.json.
+- country: name, iso3, asOf (Stand-Datum, Format JJJJ-MM-TT)
+- profile:
+  - overview: kurze Zusammenfassung
+  - political: summary, points (Liste), timeline (Liste mit date, event, significance), assessment
+  - economic: summary, strengths (Liste), risks (Liste), assessment
+  - keyFigures: Liste mit label, value, source (title, url, date)
+  - outlook: summary, scenarios (Liste mit name, whatHappens, consequences), conclusion
   - sources: Liste mit title, url, date
+- selection: criteria (warum diese 10 Partner), nearMisses (Liste: knapp nicht gewählte Länder mit Grund)
+- relations: genau 10 Einträge, jeweils mit
+  - partner (ein ISO3-Code), rank (1–10), influence (very high / high / medium)
+  - status (very good / good / mixed / tense / hostile / war), trend (rising / stable / falling)
+  - headline (Überschrift der Beziehung)
+  - economic, politicalSecurity, current (jeweils Liste von Stichpunkten)
+  - assessment (Text)
+  - sources: Liste mit title, url, date
+- Quellen-date: Veröffentlichungsdatum (JJJJ, JJJJ-MM oder JJJJ-MM-TT); bei Seiten ohne Datum (z. B. Wikipedia) der Abrufmonat.
+- Eigene Einschätzungen sind: influence, alle assessment-Felder und die scenarios. Die Website kennzeichnet sie als "Our assessment".
 - Das Schema wird einmal festgelegt und danach nur mit meiner Zustimmung geändert.
+
+## Ländercodes
+- Die Karte (world-atlas) nummeriert Länder mit ISO-Zifferncodes (z. B. 512 = Oman).
+- data/country-codes.json übersetzt sie in ISO-Alpha-2 und -Alpha-3 (z. B. "512": ["OM", "OMN"]).
+- Gebiete ohne Code (z. B. Somaliland, Nordzypern) zeigen nur ihren Namen und "No data yet". Kosovo wird in app.js als XKX geführt.
 
 ## Darstellung
 - Gebogene Pfeile vom gewählten Land zu seinen 10 Partnern, Farbe je nach status, mit Legende.
