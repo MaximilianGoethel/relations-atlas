@@ -1,4 +1,5 @@
-// Relations Atlas: draws the world map and shows country names on hover.
+// Relations Atlas: draws the world map, shows country names on hover
+// and opens a side panel when a country is clicked.
 
 // Country borders from Natural Earth (via the world-atlas package)
 const WORLD_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json";
@@ -9,6 +10,9 @@ const HIDDEN_IDS = new Set(["010"]);
 const container = document.getElementById("map-container");
 const statusText = document.getElementById("map-status");
 const tooltip = document.getElementById("tooltip");
+const panel = document.getElementById("panel");
+const panelTitle = document.getElementById("panel-title");
+const panelClose = document.getElementById("panel-close");
 const svg = d3.select("#map");
 
 // Everything inside this group moves together when zooming
@@ -40,7 +44,8 @@ d3.json(WORLD_URL)
       .attr("class", "country")
       .on("pointerenter", (event, country) => showTooltip(event, country.properties.name))
       .on("pointermove", moveTooltip)
-      .on("pointerleave", hideTooltip);
+      .on("pointerleave", hideTooltip)
+      .on("click", (event, country) => selectCountry(event.currentTarget, country));
 
     statusText.remove();
     resizeMap();
@@ -59,7 +64,39 @@ function resizeMap() {
   mapLayer.selectAll("path").attr("d", path);
 }
 
+// Highlight the clicked country and show its name in the side panel
+function selectCountry(shape, country) {
+  mapLayer.selectAll(".country").classed("selected", false);
+  d3.select(shape).classed("selected", true);
+  panelTitle.textContent = country.properties.name;
+  panel.hidden = false;
+  hideTooltip();
+}
+
+function closePanel() {
+  panel.hidden = true;
+  mapLayer.selectAll(".country").classed("selected", false);
+}
+
+panelClose.addEventListener("click", closePanel);
+
+// Escape key or a click on the ocean also closes the panel
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closePanel();
+  }
+});
+svg.on("click", (event) => {
+  if (event.target === svg.node()) {
+    closePanel();
+  }
+});
+
 function showTooltip(event, name) {
+  // Only for mouse: on touch screens a tap opens the panel instead
+  if (event.pointerType !== "mouse") {
+    return;
+  }
   tooltip.textContent = name;
   tooltip.hidden = false;
   moveTooltip(event);

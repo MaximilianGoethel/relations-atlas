@@ -68,6 +68,10 @@ body {
   fill: #6b8fb3;
 }
 
+.country.selected {
+  fill: #2f5d8a;
+}
+
 /* Small label that follows the mouse */
 .tooltip {
   position: absolute;
@@ -88,4 +92,64 @@ body {
   margin: 0;
   text-align: center;
   color: #5b6b7c;
+}
+
+/* Side panel: on the right on large screens */
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(380px, 90%);
+  padding: 1.25rem 1.25rem 1.5rem;
+  overflow-y: auto;
+  background: #ffffff;
+  border-left: 1px solid #dde3ea;
+  box-shadow: -4px 0 16px rgba(29, 39, 51, 0.12);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.panel-close {
+  float: right;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: -0.5rem -0.5rem 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #5b6b7c;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.panel-close:hover {
+  background: #eef2f6;
+}
+
+.panel-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.panel-note {
+  margin: 0;
+  color: #5b6b7c;
+}
+
+/* Small screens (phones): panel slides up from the bottom */
+@media (max-width: 700px) {
+  .panel {
+    top: auto;
+    left: 0;
+    width: 100%;
+    max-height: 55%;
+    border-left: none;
+    border-top: 1px solid #dde3ea;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 16px rgba(29, 39, 51, 0.12);
+  }
 }
