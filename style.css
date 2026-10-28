@@ -35,11 +35,17 @@ body {
   color: #5b6b7c;
 }
 
-/* Map area */
-#map-container {
-  position: relative;
+/* Main area: map on the left, panel on the right (below the map on phones) */
+.layout {
+  display: flex;
   flex: 1;
   min-height: 0;
+}
+
+.map-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -68,8 +74,79 @@ body {
   fill: #6b8fb3;
 }
 
+.country.partner {
+  fill: #a9bccf;
+}
+
+.country.partner-focus {
+  fill: #6b8fb3;
+}
+
 .country.selected {
   fill: #2f5d8a;
+}
+
+/* Arrows to the partner countries */
+.arrows {
+  /* Arrows must not catch the mouse, otherwise the country below loses its hover */
+  pointer-events: none;
+}
+
+.arrow {
+  transition: opacity 0.15s;
+}
+
+.arrow path {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.arrow-casing {
+  stroke: rgba(255, 255, 255, 0.85);
+}
+
+.arrows.has-focus .arrow:not(.active) {
+  opacity: 0.15;
+}
+
+/* Colour key in the bottom left corner of the map */
+.legend {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(29, 39, 51, 0.15);
+}
+
+.legend[hidden] {
+  display: none;
+}
+
+.legend ul {
+  margin: 0.4rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.15rem 0;
+}
+
+.legend-swatch {
+  width: 1.25rem;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.legend p {
+  margin: 0;
+  color: #5b6b7c;
 }
 
 /* Small label that follows the mouse */
@@ -94,18 +171,15 @@ body {
   color: #5b6b7c;
 }
 
-/* Side panel: on the right on large screens */
+/* Side panel: on the right on large screens, next to the map */
 .panel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(380px, 90%);
+  flex: none;
+  width: 380px;
+  max-width: 45%;
   padding: 1.25rem 1.25rem 1.5rem;
   overflow-y: auto;
   background: #ffffff;
   border-left: 1px solid #dde3ea;
-  box-shadow: -4px 0 16px rgba(29, 39, 51, 0.12);
 }
 
 .panel[hidden] {
@@ -131,7 +205,7 @@ body {
 }
 
 .panel-title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   font-size: 1.4rem;
 }
 
@@ -140,16 +214,89 @@ body {
   color: #5b6b7c;
 }
 
-/* Small screens (phones): panel slides up from the bottom */
+.panel-heading {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+/* List of the 10 partners */
+.relation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.relation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: 6px;
+}
+
+.relation-item + .relation-item {
+  border-top: 1px solid #eef2f6;
+}
+
+.relation-item.active {
+  background: #eef2f6;
+}
+
+.relation-rank {
+  width: 1.4rem;
+  font-weight: 600;
+  color: #5b6b7c;
+  text-align: right;
+}
+
+.relation-dot {
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.3rem;
+  border-radius: 50%;
+}
+
+.relation-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.relation-meta {
+  font-size: 0.8rem;
+  color: #5b6b7c;
+}
+
+.relation-headline {
+  font-size: 0.85rem;
+}
+
+.panel-soon {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #5b6b7c;
+}
+
+/* Small screens (phones): panel below the map */
 @media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+
   .panel {
-    top: auto;
-    left: 0;
-    width: 100%;
+    width: auto;
+    max-width: none;
     max-height: 55%;
     border-left: none;
     border-top: 1px solid #dde3ea;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 -4px 16px rgba(29, 39, 51, 0.12);
+  }
+
+  .legend {
+    left: 0.5rem;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
   }
 }
