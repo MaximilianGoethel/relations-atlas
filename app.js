@@ -281,25 +281,36 @@ function findRelation(iso3) {
   return selectedData ? selectedData.relations.find((relation) => relation.partner === iso3) : undefined;
 }
 
-// Panel view 1: the list of all 10 partners
-function showOverview() {
+// Panel view 1: the country itself, with two tabs ("relations" = list of partners, "profile" = country profile)
+function showOverview(tab = "relations") {
   openPartner = null;
   panelTitle.textContent = selectedCountry.displayName;
   panelNote.textContent = `Data as of ${formatDate(selectedData.country.asOf)}`;
   panelBack.hidden = true;
-  renderRelationList(selectedData.relations);
+  const content = tab === "profile"
+    ? renderCountryProfile(selectedData.profile)
+    : renderRelationList(selectedData.relations);
+  panelContent.replaceChildren(tabBar(tab), ...content);
   focusPartner(null);
   panel.scrollTop = 0;
 }
 
-function renderRelationList(relations) {
-  const heading = document.createElement("h3");
-  heading.className = "panel-heading";
-  heading.textContent = "Top 10 relations";
+function tabBar(activeTab) {
+  const bar = element("div", "tab-bar");
+  bar.setAttribute("role", "tablist");
+  [["relations", "Top 10 relations"], ["profile", "Country profile"]].forEach(([tab, label]) => {
+    const button = element("button", "tab-button", label);
+    button.type = "button";
+    button.setAttribute("role", "tab");
+    button.setAttribute("aria-selected", String(tab === activeTab));
+    button.addEventListener("click", () => showOverview(tab));
+    bar.append(button);
+  });
+  return bar;
+}
 
-  const hint = document.createElement("p");
-  hint.className = "panel-hint";
-  hint.textContent = "Click a partner, its arrow or its country for the full profile.";
+function renderRelationList(relations) {
+  const hint = element("p", "panel-hint", "Click a partner, its arrow or its country for the full profile.");
 
   const list = document.createElement("ol");
   list.className = "relation-list";
@@ -341,7 +352,86 @@ function renderRelationList(relations) {
     list.append(item);
   });
 
-  panelContent.replaceChildren(heading, hint, list);
+  return [hint, list];
+}
+
+// The country's political and economic situation, key figures and outlook
+function renderCountryProfile(profile) {
+  const overview = element("p", "profile-lead", profile.overview);
+
+  const politics = section("Politics");
+  politics.append(
+    element("p", "profile-text", profile.political.summary),
+    bulletList(profile.political.points),
+    element("h4", "panel-subheading", "Timeline"),
+    timelineList(profile.political.timeline),
+    assessmentBox(element("p", null, profile.political.assessment)),
+  );
+
+  const economy = section("Economy");
+  economy.append(
+    element("p", "profile-text", profile.economic.summary),
+    element("h4", "panel-subheading", "Strengths"),
+    bulletList(profile.economic.strengths),
+    element("h4", "panel-subheading", "Risks"),
+    bulletList(profile.economic.risks),
+    assessmentBox(element("p", null, profile.economic.assessment)),
+  );
+
+  const figures = section("Key figures");
+  figures.append(keyFigureList(profile.keyFigures));
+
+  const outlook = section("Outlook");
+  const scenarios = profile.outlook.scenarios.map((scenario) => {
+    const item = element("div", "scenario");
+    item.append(
+      element("p", "scenario-name", scenario.name),
+      labelledText("What happens: ", scenario.whatHappens),
+      labelledText("Consequences: ", scenario.consequences),
+    );
+    return item;
+  });
+  outlook.append(
+    element("p", "profile-text", profile.outlook.summary),
+    assessmentBox(element("p", "assessment-influence", "Possible scenarios"), ...scenarios),
+    element("p", "profile-text", profile.outlook.conclusion),
+  );
+
+  return [overview, politics, economy, figures, outlook, sourceSection(profile.sources)];
+}
+
+function timelineList(entries) {
+  const list = element("ol", "timeline");
+  entries.forEach((entry) => {
+    const item = document.createElement("li");
+    item.append(
+      element("span", "timeline-date", entry.date),
+      element("span", "timeline-event", entry.event),
+      element("span", "timeline-significance", entry.significance),
+    );
+    list.append(item);
+  });
+  return list;
+}
+
+function keyFigureList(figures) {
+  const list = element("dl", "key-figures");
+  figures.forEach((figure) => {
+    const value = element("dd", null, figure.value);
+    const source = element("a", "key-figure-source", figure.source.title);
+    source.href = figure.source.url;
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    value.append(source);
+    list.append(element("dt", null, figure.label), value);
+  });
+  return list;
+}
+
+function labelledText(label, text) {
+  const paragraph = document.createElement("p");
+  paragraph.append(element("strong", null, label), text);
+  return paragraph;
 }
 
 // Panel view 2: the full profile of one relationship
@@ -374,17 +464,10 @@ function openRelation(iso3) {
     bulletSection("Current situation", relation.current),
   ].filter(Boolean);
 
-  // Our own judgement, clearly separated from the sourced facts
-  const assessment = document.createElement("section");
-  assessment.className = "assessment";
-  const assessmentLabel = document.createElement("h3");
-  assessmentLabel.textContent = "Our assessment";
-  const influence = document.createElement("p");
-  influence.className = "assessment-influence";
-  influence.textContent = `Influence on ${selectedCountry.displayName}: ${relation.influence}`;
-  const assessmentText = document.createElement("p");
-  assessmentText.textContent = relation.assessment;
-  assessment.append(assessmentLabel, influence, assessmentText);
+  const assessment = assessmentBox(
+    element("p", "assessment-influence", `Influence on ${selectedCountry.displayName}: ${relation.influence}`),
+    element("p", null, relation.assessment),
+  );
 
   panelContent.replaceChildren(facts, ...sections, assessment, sourceSection(relation.sources));
   focusPartner(null);
@@ -402,52 +485,71 @@ function addFact(list, label, value, marker) {
   list.append(term, detail);
 }
 
-// A heading with a bullet list; a short lead-in before the first colon is shown in bold
+// Small helper: create an element with an optional class and text
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) {
+    node.className = className;
+  }
+  if (text !== undefined) {
+    node.textContent = text;
+  }
+  return node;
+}
+
+function section(title) {
+  const node = document.createElement("section");
+  node.append(element("h3", "panel-heading", title));
+  return node;
+}
+
+// Our own judgement, clearly separated from the sourced facts
+function assessmentBox(...children) {
+  const box = element("div", "assessment");
+  box.append(element("h4", null, "Our assessment"), ...children);
+  return box;
+}
+
+// A heading with a bullet list
 function bulletSection(title, points) {
   if (!points || points.length === 0) {
     return null;
   }
-  const section = document.createElement("section");
-  const heading = document.createElement("h3");
-  heading.className = "panel-heading";
-  heading.textContent = title;
-  const list = document.createElement("ul");
-  list.className = "bullet-list";
+  const node = section(title);
+  node.append(bulletList(points));
+  return node;
+}
+
+// A bullet list; a short lead-in before the first colon is shown in bold
+function bulletList(points) {
+  const list = element("ul", "bullet-list");
   points.forEach((point) => {
     const item = document.createElement("li");
     const colon = point.indexOf(": ");
     if (colon > 0 && colon <= 30) {
-      const lead = document.createElement("strong");
-      lead.textContent = point.slice(0, colon + 1);
-      item.append(lead, point.slice(colon + 1));
+      item.append(element("strong", null, point.slice(0, colon + 1)), point.slice(colon + 1));
     } else {
       item.textContent = point;
     }
     list.append(item);
   });
-  section.append(heading, list);
-  return section;
+  return list;
 }
 
 function sourceSection(sources) {
-  const section = document.createElement("section");
-  const heading = document.createElement("h3");
-  heading.className = "panel-heading";
-  heading.textContent = "Sources";
-  const list = document.createElement("ol");
-  list.className = "source-list";
+  const node = section("Sources");
+  const list = element("ol", "source-list");
   sources.forEach((source) => {
     const item = document.createElement("li");
-    const link = document.createElement("a");
+    const link = element("a", null, source.title);
     link.href = source.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = source.title;
     item.append(link, ` (${source.date})`);
     list.append(item);
   });
-  section.append(heading, list);
-  return section;
+  node.append(list);
+  return node;
 }
 
 function partnerName(iso3) {
@@ -465,7 +567,7 @@ function closePanel() {
 }
 
 panelClose.addEventListener("click", closePanel);
-panelBack.addEventListener("click", showOverview);
+panelBack.addEventListener("click", () => showOverview());
 
 // Escape goes back from a relationship profile to the list, otherwise closes the panel
 document.addEventListener("keydown", (event) => {

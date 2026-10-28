@@ -371,7 +371,7 @@ body {
   border-radius: 0 6px 6px 0;
 }
 
-.assessment h3 {
+.assessment h4 {
   margin: 0 0 0.4rem;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -383,8 +383,11 @@ body {
   margin: 0;
 }
 
+.assessment p + p {
+  margin-top: 0.4rem;
+}
+
 .assessment .assessment-influence {
-  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
@@ -402,6 +405,116 @@ body {
 
 .source-list a {
   color: #2f5d8a;
+}
+
+/* Tabs above the country panel */
+.tab-bar {
+  display: flex;
+  gap: 0.25rem;
+  margin: 1rem 0 0.75rem;
+  padding: 0.25rem;
+  background: #eef2f6;
+  border-radius: 8px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.45rem 0.5rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: #5b6b7c;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab-button[aria-selected="true"] {
+  font-weight: 600;
+  color: #1d2733;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(29, 39, 51, 0.15);
+}
+
+/* Country profile */
+.profile-lead {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.profile-text {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.assessment + .profile-text {
+  margin-top: 1rem;
+}
+
+.panel-subheading {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 0.85rem;
+  color: #5b6b7c;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0 0 0 0.9rem;
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  border-left: 2px solid #dde3ea;
+}
+
+.timeline li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.timeline li + li {
+  margin-top: 0.6rem;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: #2f5d8a;
+}
+
+.timeline-significance {
+  color: #5b6b7c;
+}
+
+.key-figures {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.key-figures dt {
+  font-weight: 600;
+}
+
+.key-figures dd {
+  margin: 0.1rem 0 0.7rem;
+  line-height: 1.4;
+}
+
+.key-figure-source {
+  display: block;
+  font-size: 0.75rem;
+  color: #2f5d8a;
+}
+
+.scenario {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f0e2b8;
+}
+
+.scenario .scenario-name {
+  font-weight: 600;
 }
 
 /* Small screens (phones): panel below the map */
