@@ -28,6 +28,7 @@ Eine interaktive Weltkarte als Website. Klick auf ein Land zeigt Pfeile zu seine
   - data/countries/<ISO3>.json (eine Datei pro Land)
   - data/country-codes.json (Ländercodes, siehe unten)
 - Länder ohne Daten bleiben anklickbar und zeigen "No data yet".
+- Bei jeder Änderung an style.css oder app.js die Versionsnummer (?v=) in index.html erhöhen, damit Browser nicht die alte Datei aus dem Zwischenspeicher nehmen.
 
 ## Datenformat pro Land (data/countries/<ISO3>.json)
 Festgelegt am 27.10.2026. Vorlage ist data/countries/OMN.json.
