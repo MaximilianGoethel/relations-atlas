@@ -53,6 +53,7 @@ const panelTitle = document.getElementById("panel-title");
 const panelNote = document.getElementById("panel-note");
 const panelContent = document.getElementById("panel-content");
 const panelClose = document.getElementById("panel-close");
+const panelBack = document.getElementById("panel-back");
 const svg = d3.select("#map");
 
 // Everything inside this group moves together when zooming
@@ -67,9 +68,13 @@ const countriesByIso3 = new Map();
 // Country files that were already loaded (ISO3 code -> data, or null if there is no file)
 const countryData = new Map();
 
-// The clicked country (or null) and the country the mouse is currently over (or null)
+// The clicked country (or null), its data, and the country the mouse is currently over (or null)
 let selectedCountry = null;
+let selectedData = null;
 let hoveredCountry = null;
+
+// ISO3 code of the partner whose relationship profile is open in the panel (or null)
+let openPartner = null;
 
 // Current zoom position, needed to place the arrows
 let zoomTransform = d3.zoomIdentity;
@@ -231,12 +236,26 @@ function onCountryLeave() {
 
 // ---------- Selection and panel ----------
 
-// Highlight the clicked country, keep its arrows and list its partners in the side panel
+// Click on a country: select it, or open a relationship profile if it is a partner of the selected country
 async function selectCountry(country) {
+  if (selectedCountry && country !== selectedCountry && findRelation(country.iso3)) {
+    openRelation(country.iso3);
+    return;
+  }
+  if (country === selectedCountry) {
+    if (openPartner) {
+      showOverview();
+    }
+    return;
+  }
+
   selectedCountry = country;
+  selectedData = null;
+  openPartner = null;
   mapLayer.selectAll(".country").classed("selected", (d) => d === country);
   panelTitle.textContent = country.displayName;
   panelNote.textContent = "Loading…";
+  panelBack.hidden = true;
   panelContent.replaceChildren();
   panel.hidden = false;
   hideTooltip();
@@ -247,19 +266,38 @@ async function selectCountry(country) {
   if (selectedCountry !== country) {
     return;
   }
+  selectedData = data;
   showRelations(country, data);
   if (data) {
-    panelNote.textContent = `Data as of ${formatDate(data.country.asOf)}`;
-    renderRelationList(data.relations);
+    showOverview();
   } else {
     panelNote.textContent = "No data yet.";
   }
+}
+
+function findRelation(iso3) {
+  return selectedData ? selectedData.relations.find((relation) => relation.partner === iso3) : undefined;
+}
+
+// Panel view 1: the list of all 10 partners
+function showOverview() {
+  openPartner = null;
+  panelTitle.textContent = selectedCountry.displayName;
+  panelNote.textContent = `Data as of ${formatDate(selectedData.country.asOf)}`;
+  panelBack.hidden = true;
+  renderRelationList(selectedData.relations);
+  focusPartner(null);
+  panel.scrollTop = 0;
 }
 
 function renderRelationList(relations) {
   const heading = document.createElement("h3");
   heading.className = "panel-heading";
   heading.textContent = "Top 10 relations";
+
+  const hint = document.createElement("p");
+  hint.className = "panel-hint";
+  hint.textContent = "Click a partner, its arrow or its country for the full profile.";
 
   const list = document.createElement("ol");
   list.className = "relation-list";
@@ -269,6 +307,10 @@ function renderRelationList(relations) {
     item.className = "relation-item";
     item.dataset.partner = relation.partner;
 
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "relation-button";
+
     const rank = document.createElement("span");
     rank.className = "relation-rank";
     rank.textContent = relation.rank;
@@ -277,7 +319,7 @@ function renderRelationList(relations) {
     dot.className = "relation-dot";
     dot.style.background = STATUS_COLORS[relation.status];
 
-    const text = document.createElement("div");
+    const text = document.createElement("span");
     text.className = "relation-text";
     const name = document.createElement("strong");
     name.textContent = partnerName(relation.partner);
@@ -289,17 +331,121 @@ function renderRelationList(relations) {
     headline.textContent = relation.headline;
     text.append(name, meta, headline);
 
-    item.append(rank, dot, text);
+    button.append(rank, dot, text);
+    button.addEventListener("click", () => openRelation(relation.partner));
+    item.append(button);
     item.addEventListener("pointerenter", () => focusPartner(relation.partner));
     item.addEventListener("pointerleave", () => focusPartner(null));
     list.append(item);
   });
 
-  const note = document.createElement("p");
-  note.className = "panel-soon";
-  note.textContent = "Detailed relationship profiles are coming soon.";
+  panelContent.replaceChildren(heading, hint, list);
+}
 
-  panelContent.replaceChildren(heading, list, note);
+// Panel view 2: the full profile of one relationship
+function openRelation(iso3) {
+  const relation = findRelation(iso3);
+  if (!relation) {
+    return;
+  }
+  openPartner = iso3;
+  hideTooltip();
+
+  panelTitle.textContent = `${selectedCountry.displayName} → ${partnerName(iso3)}`;
+  panelNote.textContent = relation.headline;
+  panelBack.textContent = `← All relations of ${selectedCountry.displayName}`;
+  panelBack.hidden = false;
+
+  // Rank, status and trend as small facts at the top
+  const facts = document.createElement("dl");
+  facts.className = "relation-facts";
+  const statusDot = document.createElement("span");
+  statusDot.className = "relation-dot";
+  statusDot.style.background = STATUS_COLORS[relation.status];
+  addFact(facts, "Rank", `${relation.rank} of ${selectedData.relations.length}`);
+  addFact(facts, "Status", relation.status, statusDot);
+  addFact(facts, "Trend", `${relation.trend} ${TREND_SYMBOLS[relation.trend]}`);
+
+  const sections = [
+    bulletSection("Economy", relation.economic),
+    bulletSection("Politics and security", relation.politicalSecurity),
+    bulletSection("Current situation", relation.current),
+  ].filter(Boolean);
+
+  // Our own judgement, clearly separated from the sourced facts
+  const assessment = document.createElement("section");
+  assessment.className = "assessment";
+  const assessmentLabel = document.createElement("h3");
+  assessmentLabel.textContent = "Our assessment";
+  const influence = document.createElement("p");
+  influence.className = "assessment-influence";
+  influence.textContent = `Influence on ${selectedCountry.displayName}: ${relation.influence}`;
+  const assessmentText = document.createElement("p");
+  assessmentText.textContent = relation.assessment;
+  assessment.append(assessmentLabel, influence, assessmentText);
+
+  panelContent.replaceChildren(facts, ...sections, assessment, sourceSection(relation.sources));
+  focusPartner(null);
+  panel.scrollTop = 0;
+}
+
+function addFact(list, label, value, marker) {
+  const term = document.createElement("dt");
+  term.textContent = label;
+  const detail = document.createElement("dd");
+  if (marker) {
+    detail.append(marker);
+  }
+  detail.append(value);
+  list.append(term, detail);
+}
+
+// A heading with a bullet list; a short lead-in before the first colon is shown in bold
+function bulletSection(title, points) {
+  if (!points || points.length === 0) {
+    return null;
+  }
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  heading.className = "panel-heading";
+  heading.textContent = title;
+  const list = document.createElement("ul");
+  list.className = "bullet-list";
+  points.forEach((point) => {
+    const item = document.createElement("li");
+    const colon = point.indexOf(": ");
+    if (colon > 0 && colon <= 30) {
+      const lead = document.createElement("strong");
+      lead.textContent = point.slice(0, colon + 1);
+      item.append(lead, point.slice(colon + 1));
+    } else {
+      item.textContent = point;
+    }
+    list.append(item);
+  });
+  section.append(heading, list);
+  return section;
+}
+
+function sourceSection(sources) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  heading.className = "panel-heading";
+  heading.textContent = "Sources";
+  const list = document.createElement("ol");
+  list.className = "source-list";
+  sources.forEach((source) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = source.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = source.title;
+    item.append(link, ` (${source.date})`);
+    list.append(item);
+  });
+  section.append(heading, list);
+  return section;
 }
 
 function partnerName(iso3) {
@@ -309,19 +455,29 @@ function partnerName(iso3) {
 
 function closePanel() {
   selectedCountry = null;
+  selectedData = null;
+  openPartner = null;
   panel.hidden = true;
   mapLayer.selectAll(".country").classed("selected", false);
   showRelations(null, null);
 }
 
 panelClose.addEventListener("click", closePanel);
+panelBack.addEventListener("click", showOverview);
 
-// Escape key or a click on the ocean also closes the panel
+// Escape goes back from a relationship profile to the list, otherwise closes the panel
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
+  if (event.key !== "Escape") {
+    return;
+  }
+  if (openPartner) {
+    showOverview();
+  } else {
     closePanel();
   }
 });
+
+// A click on the ocean closes the panel
 svg.on("click", (event) => {
   if (event.target === svg.node()) {
     closePanel();
@@ -371,6 +527,12 @@ function showRelations(country, data) {
       const group = enter.append("g").attr("class", "arrow");
       group.append("path").attr("class", "arrow-casing");
       group.append("path").attr("class", "arrow-line");
+      // Wide invisible line that makes the arrow easy to click
+      group.append("path")
+        .attr("class", "arrow-hit")
+        .on("pointerenter", (event, arrow) => focusPartner(arrow.relation.partner))
+        .on("pointerleave", () => focusPartner(null))
+        .on("click", (event, arrow) => openRelation(arrow.relation.partner));
       return group;
     });
   groups.select(".arrow-casing")
@@ -380,6 +542,8 @@ function showRelations(country, data) {
     .attr("stroke-width", (arrow) => INFLUENCE_WIDTHS[arrow.relation.influence])
     .attr("marker-end", (arrow) => `url(#${arrowheadId(arrow.relation.status)})`);
 
+  // Arrows can only be clicked once a country is selected, so the hover preview is not disturbed
+  arrowLayer.classed("clickable", selectedCountry !== null);
   updateArrowPositions();
   legend.hidden = arrows.length === 0;
   focusPartner(null);
@@ -409,10 +573,12 @@ function arrowPath(from, to) {
   return `M${x1},${y1} Q${controlX},${controlY} ${x2},${y2}`;
 }
 
-// Make one partner's arrow and country stand out; null shows all arrows normally
+// Make one partner's arrow and country stand out. With null, the partner whose profile is open
+// stays highlighted; if no profile is open, all arrows are shown normally.
 function focusPartner(iso3) {
-  const hasArrow = !arrowLayer.selectAll(".arrow").filter((arrow) => arrow.relation.partner === iso3).empty();
-  const active = iso3 && hasArrow ? iso3 : null;
+  const target = iso3 || openPartner;
+  const hasArrow = !arrowLayer.selectAll(".arrow").filter((arrow) => arrow.relation.partner === target).empty();
+  const active = target && hasArrow ? target : null;
   arrowLayer.classed("has-focus", active !== null);
   arrowLayer.selectAll(".arrow").classed("active", (arrow) => arrow.relation.partner === active);
   mapLayer.selectAll(".country").classed("partner-focus", (d) => active !== null && d.iso3 === active);

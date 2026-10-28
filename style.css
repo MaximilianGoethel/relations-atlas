@@ -105,6 +105,17 @@ body {
   stroke: rgba(255, 255, 255, 0.85);
 }
 
+.arrow-hit {
+  stroke: transparent;
+  stroke-width: 14px;
+}
+
+/* Once a country is selected, its arrows can be clicked */
+.arrows.clickable .arrow-hit {
+  pointer-events: stroke;
+  cursor: pointer;
+}
+
 .arrows.has-focus .arrow:not(.active) {
   opacity: 0.15;
 }
@@ -227,11 +238,23 @@ body {
 }
 
 .relation-item {
+  border-radius: 6px;
+}
+
+/* Each partner is a button that opens its relationship profile */
+.relation-button {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
+  width: 100%;
   padding: 0.6rem 0.5rem;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: none;
+  border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .relation-item + .relation-item {
@@ -273,11 +296,112 @@ body {
   font-size: 0.85rem;
 }
 
-.panel-soon {
-  margin: 1rem 0 0;
+.panel-hint {
+  margin: 0 0 0.5rem;
   font-size: 0.8rem;
-  font-style: italic;
   color: #5b6b7c;
+}
+
+/* Relationship profile */
+.panel-back {
+  display: block;
+  margin: -0.25rem 0 0.75rem;
+  padding: 0.3rem 0;
+  font: inherit;
+  font-size: 0.85rem;
+  color: #2f5d8a;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.panel-back[hidden] {
+  display: none;
+}
+
+.panel-back:hover {
+  text-decoration: underline;
+}
+
+.relation-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  background: #f4f6f8;
+  border-radius: 6px;
+}
+
+.relation-facts dt {
+  color: #5b6b7c;
+}
+
+.relation-facts dd {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.relation-facts .relation-dot {
+  margin-top: 0;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.bullet-list li + li {
+  margin-top: 0.4rem;
+}
+
+/* Our own judgement, set apart from the sourced facts */
+.assessment {
+  margin-top: 1.25rem;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  background: #fdf6e3;
+  border-left: 4px solid #e6a700;
+  border-radius: 0 6px 6px 0;
+}
+
+.assessment h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8a6500;
+}
+
+.assessment p {
+  margin: 0;
+}
+
+.assessment .assessment-influence {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.source-list {
+  margin: 0;
+  padding-left: 1.3rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #5b6b7c;
+}
+
+.source-list li + li {
+  margin-top: 0.3rem;
+}
+
+.source-list a {
+  color: #2f5d8a;
 }
 
 /* Small screens (phones): panel below the map */
