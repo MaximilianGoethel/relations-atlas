@@ -16,6 +16,8 @@ const CODES_BY_NAME = { "Kosovo": ["XK", "XKX"] };
 // Nicer names where the browser's built-in English names are awkward
 const NAME_OVERRIDES = {
   CD: "DR Congo",
+  // Safari calls it "China mainland"
+  CN: "China",
   CG: "Republic of the Congo",
   HK: "Hong Kong",
   MM: "Myanmar",
